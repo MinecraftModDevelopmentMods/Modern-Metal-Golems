@@ -51,7 +51,7 @@ public class EntityPlutoniumGolem extends MetalGolemBase2
 			List<Entity> entityList = worldObj.getEntitiesWithinAABBExcludingEntity(this, this.getEntityBoundingBox().expand(poisonAOEFactor, poisonAOEFactor * 0.75D, poisonAOEFactor));
 			for(Entity entity : entityList)
 			{
-				if(entity instanceof EntityLivingBase)
+				if(entity instanceof EntityLivingBase && !(entity instanceof EntityPlutoniumGolem))
 				{
 					EntityLivingBase entityLiving = (EntityLivingBase)entity;
 					if(null == entityLiving.getActivePotionEffect(MobEffects.POISON))

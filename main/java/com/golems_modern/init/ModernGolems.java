@@ -18,7 +18,7 @@ public class ModernGolems
 	public static final String MODID = "golems_modern";
 	public static final String DEPENDENCIES = "required-after:golems@[6.02,);required-after:modernmetals@[0.11.0,)";
 	public static final String NAME = "Modern Metal Golems Addon";
-	public static final String VERSION = "6.02.1";
+	public static final String VERSION = "6.02.2";
 	public static final String MCVERSION = "1.10.2";
 	
 	@Mod.Instance(ModernGolems.MODID)
