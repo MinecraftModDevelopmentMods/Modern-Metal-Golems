@@ -25,5 +25,4 @@ public class EntityManganeseGolem extends MetalGolemBase
 		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(ModernConfig.MANGANESE.getMaxHealth());
 		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(METAL_GOLEM_SPEED);
 	}
-	
 }

@@ -1,5 +1,6 @@
 package com.golems_modern.entity;
 
+import com.golems.entity.ai.EntityAIPlaceRandomBlocksStrictly;
 import com.golems_modern.init.ModernConfig;
 
 import net.minecraft.block.state.IBlockState;
@@ -22,7 +23,8 @@ public class EntityMagnesiumGolem extends MetalGolemBase
 		int ticks = ModernConfig.MAGNESIUM.getInt(FIRE_DELAY);
 		boolean allow = ModernConfig.MAGNESIUM.getBoolean(ALLOW_PLACE_FIRE);
 		IBlockState[] fire = new IBlockState[] { Blocks.FIRE.getDefaultState() };
-		EntityAIBase aiPlaceFire = new com.golems_modern.entity.ai.EntityAIPlaceRandomBlocksWithCheck(this, ticks, fire, allow);
+		EntityAIBase aiPlaceFire = new com.golems.entity.ai.EntityAIPlaceRandomBlocks(this, ticks, fire, 
+				EntityAIPlaceRandomBlocksStrictly.getGriefingPredicate().and(EntityAIPlaceRandomBlocksStrictly.getPredicate(allow)));
 		this.tasks.addTask(2, aiPlaceFire);
 		if(allow) this.isImmuneToFire = true;
 	}
@@ -55,5 +57,4 @@ public class EntityMagnesiumGolem extends MetalGolemBase
 		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(ModernConfig.MAGNESIUM.getMaxHealth());
 		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(METAL_GOLEM_SPEED);
 	}
-	
 }

@@ -33,5 +33,4 @@ public class EntityNichromeGolem extends MetalGolemBase2
 	{
 		return this.makeGolemTexture(ModernGolems.MODID, "nichrome");
 	}
-	
 }

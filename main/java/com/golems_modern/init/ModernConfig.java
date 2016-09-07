@@ -68,6 +68,4 @@ public class ModernConfig
 
 		config.save();
 	}
-
-
 }

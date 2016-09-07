@@ -7,6 +7,7 @@ entity.golems_modern.golem_galvsteel.name=Galvanized Steel Golem
 entity.golems_modern.golem_iridium.name=Iridium Golem
 entity.golems_modern.golem_magnesium.name=Magnesium Golem
 entity.golems_modern.golem_manganese.name=Manganse Golem
+entity.golems_modern.golem_nichrome.name=Nichrome Golem
 entity.golems_modern.golem_plutonium.name=Plutonium Golem
 entity.golems_modern.golem_rutile.name=Rutile Golem
 entity.golems_modern.golem_stainsteel.name=Stainless Steel Golem
@@ -19,3 +20,11 @@ entity.golems_modern.golem_zirconium.name=Zirconium Golem
 # tooltips
 tooltip.modernmetals=Modern Metals
 tooltip.all_modern_metals=All modern metals
+
+# WAILA and TOP tips
+entitytip.light_fires=Lights fires
+entitytip.poisons_mobs=Poisons creatures
+
+#Extra Golems fix
+entitytip.tile.stonebrick.name=Cobblestone
+entitytip.is_fireproof=Fireproof

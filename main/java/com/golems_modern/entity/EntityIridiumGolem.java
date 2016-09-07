@@ -33,5 +33,4 @@ public class EntityIridiumGolem extends MetalGolemBase2
 	{
 		return this.makeGolemTexture(ModernGolems.MODID, "iridium");
 	}
-	
 }

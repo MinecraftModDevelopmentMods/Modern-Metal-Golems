@@ -25,5 +25,4 @@ public class EntityGalvSteelGolem extends MetalGolemBase
 		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(ModernConfig.GALVANIZED_STEEL.getMaxHealth());
 		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(METAL_GOLEM_SPEED);
 	}
-	
 }

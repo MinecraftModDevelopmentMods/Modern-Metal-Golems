@@ -33,5 +33,4 @@ public class EntityAluminumBrassGolem extends MetalGolemBase2
 	{
 		return this.makeGolemTexture(ModernGolems.MODID, "aluminum_brass");
 	}
-	
 }

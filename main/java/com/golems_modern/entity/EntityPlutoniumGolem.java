@@ -61,6 +61,11 @@ public class EntityPlutoniumGolem extends MetalGolemBase2
 				}
 			}
 		}
+		
+		if(this.getActivePotionEffect(MobEffects.POISON) != null)
+		{
+			this.removeActivePotionEffect(MobEffects.POISON);
+		}
 	}
 
 	@Override
