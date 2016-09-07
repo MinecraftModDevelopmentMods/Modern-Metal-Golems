@@ -1,0 +1,21 @@
+﻿# entity names
+entity.golems_modern.golem_aluminum.name=Aluminum Golem
+entity.golems_modern.golem_aluminumbrass.name=Aluminum Brass Golem
+entity.golems_modern.golem_cadmium.name=Cadmium Golem
+entity.golems_modern.golem_chromium.name=Chromium Golem
+entity.golems_modern.golem_galvsteel.name=Galvanized Steel Golem
+entity.golems_modern.golem_iridium.name=Iridium Golem
+entity.golems_modern.golem_magnesium.name=Magnesium Golem
+entity.golems_modern.golem_manganese.name=Manganse Golem
+entity.golems_modern.golem_plutonium.name=Plutonium Golem
+entity.golems_modern.golem_rutile.name=Rutile Golem
+entity.golems_modern.golem_stainsteel.name=Stainless Steel Golem
+entity.golems_modern.golem_tantalum.name=Tantalum Golem
+entity.golems_modern.golem_titanium.name=Titanium Golem
+entity.golems_modern.golem_tungsten.name=Tungsten Golem
+entity.golems_modern.golem_uranium.name=Uranium Golem
+entity.golems_modern.golem_zirconium.name=Zirconium Golem
+
+# tooltips
+tooltip.modernmetals=Modern Metals
+tooltip.all_modern_metals=All modern metals

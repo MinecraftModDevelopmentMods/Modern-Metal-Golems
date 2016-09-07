@@ -1,0 +1,16 @@
+[
+{
+  "modid": "golems_modern",
+  "name": "Modern Metal Golems Addon",
+  "description": "Make golems using Modern Metal blocks!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["sky01"],
+  "credits": "Textures made with Gimp 2.8",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
