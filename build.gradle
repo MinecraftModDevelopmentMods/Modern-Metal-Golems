@@ -27,13 +27,13 @@ plugins {
 */
 version = "6.02.3"
 group= "com.golems" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "ModernMetalGolemsAddon[1.10.2]"
+archivesBaseName = "ModernMetalGolemsAddon[1.11.2]"
 
 minecraft {
     version = "1.11.2-13.20.0.2228"
     runDir = "run"
 
-    mappings = "snapshot_20170531"
+    mappings = "stable_32"
     makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 }
 
@@ -44,14 +44,16 @@ repositories {
 	maven { url = "http://mobiusstrip.eu/maven" }
 	maven { url = "http://dvs1.progwml6.com/files/maven" }
 	maven { url = "http://chickenbones.net/maven/" }
+    maven { url = 'https://repo.spongepowered.org/maven/' }
+    maven { url = "http://maven.covers1624.net" }
 }
 
 dependencies {
     compile "com.golems:ExtraGolems:1.10.2-6.02:deobf"
-    compile "cyano:BaseMetals:1.10.2-2.4.0:deobf"
-//    compile "com.mcmoddev:ModernMetals:1.10.2-0.11.0:deobf"
-	provided 'mcp.mobius.waila:Waila:1.7.0-B3_1.9.4:dev'
-	provided 'mcjty.theoneprobe:TheOneProbe:1.10-1.1.0-30'
+	provided 'mcp.mobius.waila:Waila:1.7.1_1.11.2:dev'
+	provided 'mcjty.theoneprobe:TheOneProbe:1.1x-1.4.0-50'
+    compile "com.mcmoddev:BaseMetals:1.11.2-2.5.0-beta+:deobf"
+    compile "com.mcmoddev:ModernMetals:1.11.2-2.5.0-beta+:deobf"
 }
 
 processResources
