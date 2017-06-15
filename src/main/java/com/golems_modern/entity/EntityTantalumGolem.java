@@ -10,13 +10,13 @@ public class EntityTantalumGolem extends MetalGolemBase
 {
 	public EntityTantalumGolem(World world) 
 	{
-		super(world, ModernConfig.TANTALUM.getBaseAttack(), modernmetals.init.Blocks.tantalum_block, 0xD8D6D7, false);
+		super(world, ModernConfig.TANTALUM.getBaseAttack(), MetalGolemBase.getBlockForMat("TANTALUM"), 0xD8D6D7, false);
 	}
 
 	@Override
 	public Item getIngot() 
 	{
-		return modernmetals.init.Items.tantalum_ingot;
+		return MetalGolemBase.getIngotForMat("TANTALUM");
 	}
 
 	@Override

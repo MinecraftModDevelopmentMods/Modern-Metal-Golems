@@ -10,13 +10,13 @@ public class EntityStainSteelGolem extends MetalGolemBase
 {
 	public EntityStainSteelGolem(World world) 
 	{
-		super(world, ModernConfig.STAINLESS_STEEL.getBaseAttack(), modernmetals.init.Blocks.stainlesssteel_block, 0xD8D6D7, false);
+		super(world, ModernConfig.STAINLESS_STEEL.getBaseAttack(), MetalGolemBase.getBlockForMat("STAINLESS_STEEL"), 0xD8D6D7, false);
 	}
 
 	@Override
 	public Item getIngot() 
 	{
-		return modernmetals.init.Items.stainlesssteel_ingot;
+		return MetalGolemBase.getIngotForMat("STAINLESS_STELL");
 	}
 
 	@Override

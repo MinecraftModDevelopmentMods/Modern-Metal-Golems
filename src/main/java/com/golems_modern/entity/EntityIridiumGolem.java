@@ -1,5 +1,6 @@
 package com.golems_modern.entity;
 
+import com.golems.entity.GolemBase;
 import com.golems_modern.init.ModernConfig;
 import com.golems_modern.init.ModernGolems;
 
@@ -12,13 +13,13 @@ public class EntityIridiumGolem extends MetalGolemBase2
 {
 	public EntityIridiumGolem(World world) 
 	{
-		super(world, ModernConfig.IRIDIUM.getBaseAttack(), modernmetals.init.Blocks.iridium_block);
+		super(world, ModernConfig.IRIDIUM.getBaseAttack(), MetalGolemBase.getBlockForMat("IRIDIUM"));
 	}
 
 	@Override
 	public Item getIngot() 
 	{
-		return modernmetals.init.Items.iridium_ingot;
+		return MetalGolemBase.getIngotForMat("IRIDIUM");
 	}
 
 	@Override
@@ -31,6 +32,6 @@ public class EntityIridiumGolem extends MetalGolemBase2
 	@Override
 	protected ResourceLocation applyTexture() 
 	{
-		return this.makeGolemTexture(ModernGolems.MODID, "iridium");
+		return GolemBase.makeGolemTexture(ModernGolems.MODID, "iridium");
 	}
 }

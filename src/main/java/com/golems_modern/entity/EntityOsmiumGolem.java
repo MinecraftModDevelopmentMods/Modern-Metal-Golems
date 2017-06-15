@@ -10,13 +10,13 @@ public class EntityOsmiumGolem extends MetalGolemBase
 {
 	public EntityOsmiumGolem(World world) 
 	{
-		super(world, ModernConfig.OSMIUM.getBaseAttack(), modernmetals.init.Blocks.osmium_block, 0xBDC3C8, false);
+		super(world, ModernConfig.OSMIUM.getBaseAttack(), MetalGolemBase.getBlockForMat("OSMIUM"), 0xBDC3C8, false);
 	}
 
 	@Override
 	public Item getIngot() 
 	{
-		return modernmetals.init.Items.osmium_ingot;
+		return MetalGolemBase.getIngotForMat("OSMIUM")	;
 	}
 
 	@Override

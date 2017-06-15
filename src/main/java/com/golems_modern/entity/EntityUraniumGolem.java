@@ -1,5 +1,6 @@
 package com.golems_modern.entity;
 
+import com.golems.entity.GolemBase;
 import com.golems_modern.init.ModernConfig;
 import com.golems_modern.init.ModernGolems;
 
@@ -12,7 +13,7 @@ public class EntityUraniumGolem extends EntityPlutoniumGolem
 {
 	public EntityUraniumGolem(World world) 
 	{
-		super(world, ModernConfig.URANIUM.getBaseAttack(), modernmetals.init.Blocks.uranium_block);
+		super(world, ModernConfig.URANIUM.getBaseAttack(), MetalGolemBase.getBlockForMat("URANIUM"));
 		this.poisonAOEFactor = ModernConfig.URANIUM.getFloat(AOE);
 		this.poisonLen = ModernConfig.URANIUM.getInt(DURATION);
 		this.poisonAmp = ModernConfig.URANIUM.getInt(AMPLIFIER);
@@ -22,7 +23,7 @@ public class EntityUraniumGolem extends EntityPlutoniumGolem
 	@Override
 	public Item getIngot() 
 	{
-		return modernmetals.init.Items.uranium_ingot;
+		return MetalGolemBase.getIngotForMat("URANIUM");
 	}
 
 	@Override
@@ -35,6 +36,6 @@ public class EntityUraniumGolem extends EntityPlutoniumGolem
 	@Override
 	protected ResourceLocation applyTexture() 
 	{
-		return this.makeGolemTexture(ModernGolems.MODID, "uranium");
+		return GolemBase.makeGolemTexture(ModernGolems.MODID, "uranium");
 	}
 }

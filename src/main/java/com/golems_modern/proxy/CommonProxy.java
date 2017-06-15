@@ -5,7 +5,6 @@ import com.golems_modern.entity.EntityAluminumGolem;
 import com.golems_modern.entity.EntityCadmiumGolem;
 import com.golems_modern.entity.EntityChromiumGolem;
 import com.golems_modern.entity.EntityGalvSteelGolem;
-import com.golems_modern.entity.EntityIridiumGolem;
 import com.golems_modern.entity.EntityMagnesiumGolem;
 import com.golems_modern.entity.EntityManganeseGolem;
 import com.golems_modern.entity.EntityNichromeGolem;
@@ -21,6 +20,8 @@ import com.golems_modern.entity.EntityZirconiumGolem;
 import com.golems_modern.events.BuildEventHandler;
 import com.golems_modern.init.ModernGolems;
 
+import net.minecraft.entity.Entity;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
@@ -35,8 +36,7 @@ public class CommonProxy
 		register(EntityAluminumBrassGolem.class, "golem_aluminumbrass");
 		register(EntityCadmiumGolem.class, "golem_cadmium");
 		register(EntityChromiumGolem.class, "golem_chromium");
-		register(EntityGalvSteelGolem.class, "golem_galvsteel");
-		register(EntityIridiumGolem.class, "golem_iridium");
+		register(EntityGalvSteelGolem.class, "golem_galvsteel");	
 		register(EntityMagnesiumGolem.class, "golem_magnesium");
 		register(EntityManganeseGolem.class, "golem_manganese");
 		register(EntityNichromeGolem.class, "golem_nichrome");
@@ -57,8 +57,8 @@ public class CommonProxy
 	}
 	
 	/** registers the entity **/
-	protected void register(Class entityClass, String name)
+	protected void register(Class<? extends Entity> entityClass, String name)
 	{		
-		EntityRegistry.registerModEntity(entityClass, name, ++entityCount, ModernGolems.instance, 48, 3, true);
+		EntityRegistry.registerModEntity(new ResourceLocation(name), entityClass, name, ++entityCount, ModernGolems.instance, 48, 3, true);
 	}
 }

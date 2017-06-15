@@ -1,5 +1,6 @@
 package com.golems_modern.entity;
 
+import com.golems.entity.GolemBase;
 import com.golems_modern.init.ModernConfig;
 import com.golems_modern.init.ModernGolems;
 
@@ -12,13 +13,13 @@ public class EntityNichromeGolem extends MetalGolemBase2
 {
 	public EntityNichromeGolem(World world) 
 	{
-		super(world, ModernConfig.NICHROME.getBaseAttack(), modernmetals.init.Blocks.nichrome_block);
+		super(world, ModernConfig.NICHROME.getBaseAttack(), MetalGolemBase.getBlockForMat("NICHROME"));
 	}
 
 	@Override
 	public Item getIngot() 
 	{
-		return modernmetals.init.Items.nichrome_ingot;
+		return MetalGolemBase.getIngotForMat("NICHROME");
 	}
 
 	@Override
@@ -31,6 +32,6 @@ public class EntityNichromeGolem extends MetalGolemBase2
 	@Override
 	protected ResourceLocation applyTexture() 
 	{
-		return this.makeGolemTexture(ModernGolems.MODID, "nichrome");
+		return GolemBase.makeGolemTexture(ModernGolems.MODID, "nichrome");
 	}
 }

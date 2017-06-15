@@ -6,7 +6,6 @@ import com.golems.entity.GolemBase;
 import com.golems.entity.GolemColorized;
 import com.golems.util.WeightedItem;
 import com.golems_modern.init.ModernGolems;
-
 import net.minecraft.block.Block;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
@@ -16,6 +15,9 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.mcmoddev.lib.data.Names;
+import com.mcmoddev.lib.init.Materials;
 
 public abstract class MetalGolemBase extends GolemColorized
 {
@@ -29,6 +31,15 @@ public abstract class MetalGolemBase extends GolemColorized
 	{
 		super(world, attack, color, TEXTURE_BASE, isHighContrast ? TEXTURE_OVERLAY_HIGH : TEXTURE_OVERLAY_LOW);
 		this.setCreativeReturn(pickBlock);
+	}
+	
+	
+	public static Block getBlockForMat(String material) {
+		return Materials.getMaterialByName(material).getBlock(Names.BLOCK);
+	}
+	
+	public static Item getIngotForMat(String material) {
+		return Materials.getMaterialByName(material).getItem(Names.INGOT);
 	}
 	
 	public MetalGolemBase(World world, float attack, Block pickBlock, long color) 

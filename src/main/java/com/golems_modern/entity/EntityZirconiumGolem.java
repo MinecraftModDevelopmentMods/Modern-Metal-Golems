@@ -10,13 +10,13 @@ public class EntityZirconiumGolem extends MetalGolemBase
 {
 	public EntityZirconiumGolem(World world) 
 	{
-		super(world, ModernConfig.ZIRCONIUM.getBaseAttack(), modernmetals.init.Blocks.zirconium_block, 0xC5C7C5, false);
+		super(world, ModernConfig.ZIRCONIUM.getBaseAttack(), MetalGolemBase.getBlockForMat("ZIRCONIUM"), 0xC5C7C5, false);
 	}
 
 	@Override
 	public Item getIngot() 
 	{
-		return modernmetals.init.Items.zirconium_ingot;
+		return MetalGolemBase.getIngotForMat("ZIRCONIUM");
 	}
 
 	@Override

@@ -10,13 +10,13 @@ public class EntityGalvSteelGolem extends MetalGolemBase
 {
 	public EntityGalvSteelGolem(World world) 
 	{
-		super(world, ModernConfig.GALVANIZED_STEEL.getBaseAttack(), modernmetals.init.Blocks.galvanizedsteel_block, 0xC8CDCB, false);
+		super(world, ModernConfig.GALVANIZED_STEEL.getBaseAttack(), MetalGolemBase.getBlockForMat("GALVANIZED_STEEL"), 0xC8CDCB, false);
 	}
 
 	@Override
 	public Item getIngot() 
 	{
-		return modernmetals.init.Items.galvanizedsteel_ingot;
+		return MetalGolemBase.getIngotForMat("GALVANIZED_STEEL");
 	}
 
 	@Override

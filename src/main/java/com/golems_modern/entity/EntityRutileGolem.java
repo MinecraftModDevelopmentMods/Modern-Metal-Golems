@@ -1,5 +1,6 @@
 package com.golems_modern.entity;
 
+import com.golems.entity.GolemBase;
 import com.golems_modern.init.ModernConfig;
 import com.golems_modern.init.ModernGolems;
 
@@ -12,13 +13,13 @@ public class EntityRutileGolem extends MetalGolemBase2
 {
 	public EntityRutileGolem(World world) 
 	{
-		super(world, ModernConfig.RUTILE.getBaseAttack(), modernmetals.init.Blocks.rutile_block);
+		super(world, ModernConfig.RUTILE.getBaseAttack(), MetalGolemBase.getBlockForMat("RUTILE"));
 	}
 
 	@Override
 	public Item getIngot() 
 	{
-		return modernmetals.init.Items.rutile_ingot;
+		return MetalGolemBase.getIngotForMat("RUTILE");
 	}
 
 	@Override
@@ -31,6 +32,6 @@ public class EntityRutileGolem extends MetalGolemBase2
 	@Override
 	protected ResourceLocation applyTexture() 
 	{
-		return this.makeGolemTexture(ModernGolems.MODID, "rutile");
+		return GolemBase.makeGolemTexture(ModernGolems.MODID, "rutile");
 	}
 }

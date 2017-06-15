@@ -10,13 +10,13 @@ public class EntityTungstenGolem extends MetalGolemBase
 {
 	public EntityTungstenGolem(World world) 
 	{
-		super(world, ModernConfig.TUNGSTEN.getBaseAttack(), modernmetals.init.Blocks.tungsten_block, 0xBABBBD, false);
+		super(world, ModernConfig.TUNGSTEN.getBaseAttack(), MetalGolemBase.getBlockForMat("TUNGSTEN"), 0xBABBBD, false);
 	}
 
 	@Override
 	public Item getIngot() 
 	{
-		return modernmetals.init.Items.tungsten_ingot;
+		return MetalGolemBase.getIngotForMat("TUNGSTEN");
 	}
 
 	@Override

@@ -19,7 +19,7 @@ public class EntityMagnesiumGolem extends MetalGolemBase
 	
 	public EntityMagnesiumGolem(World world) 
 	{
-		super(world, ModernConfig.MAGNESIUM.getBaseAttack(), modernmetals.init.Blocks.magnesium_block, 0xBEBEBB, false);
+		super(world, ModernConfig.MAGNESIUM.getBaseAttack(), MetalGolemBase.getBlockForMat("MAGNESIUM"), 0xBEBEBB, false);
 		int ticks = ModernConfig.MAGNESIUM.getInt(FIRE_DELAY);
 		boolean allow = ModernConfig.MAGNESIUM.getBoolean(ALLOW_PLACE_FIRE);
 		IBlockState[] fire = new IBlockState[] { Blocks.FIRE.getDefaultState() };
@@ -48,7 +48,7 @@ public class EntityMagnesiumGolem extends MetalGolemBase
 	@Override
 	public Item getIngot() 
 	{
-		return modernmetals.init.Items.magnesium_ingot;
+		return MetalGolemBase.getIngotForMat("MAGNESIUM");
 	}
 
 	@Override

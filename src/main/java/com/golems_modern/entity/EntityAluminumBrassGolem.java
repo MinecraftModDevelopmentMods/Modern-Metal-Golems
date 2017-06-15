@@ -1,5 +1,6 @@
 package com.golems_modern.entity;
 
+import com.golems.entity.GolemBase;
 import com.golems_modern.init.ModernConfig;
 import com.golems_modern.init.ModernGolems;
 
@@ -12,13 +13,13 @@ public class EntityAluminumBrassGolem extends MetalGolemBase2
 {
 	public EntityAluminumBrassGolem(World world) 
 	{
-		super(world, ModernConfig.ALUMINUM_BRASS.getBaseAttack(), modernmetals.init.Blocks.aluminumbrass_block);
+		super(world, ModernConfig.ALUMINUM_BRASS.getBaseAttack(), MetalGolemBase.getBlockForMat("ALUMINUM_BRASS"));
 	}
 
 	@Override
 	public Item getIngot() 
 	{
-		return modernmetals.init.Items.aluminumbrass_ingot;
+		return MetalGolemBase.getIngotForMat("ALUMINUM_BRASS");
 	}
 
 	@Override
@@ -31,6 +32,6 @@ public class EntityAluminumBrassGolem extends MetalGolemBase2
 	@Override
 	protected ResourceLocation applyTexture() 
 	{
-		return this.makeGolemTexture(ModernGolems.MODID, "aluminum_brass");
+		return GolemBase.makeGolemTexture(ModernGolems.MODID, "aluminum_brass");
 	}
 }

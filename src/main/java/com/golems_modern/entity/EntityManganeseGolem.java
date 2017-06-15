@@ -10,13 +10,13 @@ public class EntityManganeseGolem extends MetalGolemBase
 {
 	public EntityManganeseGolem(World world) 
 	{
-		super(world, ModernConfig.MANGANESE.getBaseAttack(), modernmetals.init.Blocks.manganese_block, 0xEBDDE0, false);
+		super(world, ModernConfig.MANGANESE.getBaseAttack(), MetalGolemBase.getBlockForMat("MANGANESE"), 0xEBDDE0, false);
 	}
 
 	@Override
 	public Item getIngot() 
 	{
-		return modernmetals.init.Items.manganese_ingot;
+		return MetalGolemBase.getIngotForMat("MANGANESE");
 	}
 
 	@Override

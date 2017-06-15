@@ -18,7 +18,7 @@ public class ModernGolemDescriptionManager extends GolemDescriptionManager
 	@Override
 	public List<String> getEntityDescription(GolemBase golem)
 	{
-		List<String> list = new LinkedList();
+		List<String> list = new LinkedList<String>();
 
 		if(this.showSpecial)
 		{

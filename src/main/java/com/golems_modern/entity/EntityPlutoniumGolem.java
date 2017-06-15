@@ -2,6 +2,7 @@ package com.golems_modern.entity;
 
 import java.util.List;
 
+import com.golems.entity.GolemBase;
 import com.golems_modern.init.ModernConfig;
 import com.golems_modern.init.ModernGolems;
 
@@ -38,7 +39,7 @@ public class EntityPlutoniumGolem extends MetalGolemBase2
 
 	public EntityPlutoniumGolem(World world) 
 	{
-		this(world, ModernConfig.PLUTONIUM.getBaseAttack(), modernmetals.init.Blocks.plutonium_block);
+		this(world, ModernConfig.PLUTONIUM.getBaseAttack(), MetalGolemBase.getBlockForMat("PLUTONIUM"));
 	}
 
 	@Override
@@ -71,7 +72,7 @@ public class EntityPlutoniumGolem extends MetalGolemBase2
 	@Override
 	public Item getIngot() 
 	{
-		return modernmetals.init.Items.plutonium_ingot;
+		return MetalGolemBase.getIngotForMat("PLUTONIUM");
 	}
 
 	@Override
@@ -84,6 +85,6 @@ public class EntityPlutoniumGolem extends MetalGolemBase2
 	@Override
 	protected ResourceLocation applyTexture() 
 	{
-		return this.makeGolemTexture(ModernGolems.MODID, "plutonium");
+		return GolemBase.makeGolemTexture(ModernGolems.MODID, "plutonium");
 	}
 }

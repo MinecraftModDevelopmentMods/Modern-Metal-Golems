@@ -10,13 +10,13 @@ public class EntityCadmiumGolem extends MetalGolemBase
 {
 	public EntityCadmiumGolem(World world) 
 	{
-		super(world, ModernConfig.CADMIUM.getBaseAttack(), modernmetals.init.Blocks.cadmium_block, 0xDADEE0, false);
+		super(world, ModernConfig.CADMIUM.getBaseAttack(),MetalGolemBase.getBlockForMat("CADMIUM"), 0xDADEE0, false);
 	}
 
 	@Override
 	public Item getIngot() 
 	{
-		return modernmetals.init.Items.cadmium_ingot;
+		return MetalGolemBase.getIngotForMat("CADMIUM");
 	}
 
 	@Override

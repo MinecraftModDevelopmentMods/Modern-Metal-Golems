@@ -10,13 +10,13 @@ public class EntityTitaniumGolem extends MetalGolemBase
 {
 	public EntityTitaniumGolem(World world) 
 	{
-		super(world, ModernConfig.TITANIUM.getBaseAttack(), modernmetals.init.Blocks.titanium_block, 0xB9BABC, false);
+		super(world, ModernConfig.TITANIUM.getBaseAttack(), MetalGolemBase.getBlockForMat("TITANIUM"), 0xB9BABC, false);
 	}
 
 	@Override
 	public Item getIngot() 
 	{
-		return modernmetals.init.Items.titanium_ingot;
+		return MetalGolemBase.getIngotForMat("TITANIUM");
 	}
 
 	@Override

@@ -10,13 +10,13 @@ public class EntityAluminumGolem extends MetalGolemBase
 {
 	public EntityAluminumGolem(World world) 
 	{
-		super(world, ModernConfig.ALUMINUM.getBaseAttack(), modernmetals.init.Blocks.aluminum_block, 0xD8D9D6, false);
+		super(world, ModernConfig.ALUMINUM.getBaseAttack(), MetalGolemBase.getBlockForMat("ALUMINUM"), 0xD8D9D6, false);
 	}
 
 	@Override
 	public Item getIngot() 
 	{
-		return modernmetals.init.Items.aluminum_ingot;
+		return MetalGolemBase.getIngotForMat("ALUMINUM");
 	}
 
 	@Override

@@ -10,13 +10,13 @@ public class EntityChromiumGolem extends MetalGolemBase
 {
 	public EntityChromiumGolem(World world) 
 	{
-		super(world, ModernConfig.CHROMIUM.getBaseAttack(), modernmetals.init.Blocks.chromium_block, 0xDCDCDD, false);
+		super(world, ModernConfig.CHROMIUM.getBaseAttack(), MetalGolemBase.getBlockForMat("CHROMIUM"), 0xDCDCDD, false);
 	}
 
 	@Override
 	public Item getIngot() 
 	{
-		return modernmetals.init.Items.chromium_ingot;
+		return MetalGolemBase.getIngotForMat("CHROMIUM");
 	}
 
 	@Override
